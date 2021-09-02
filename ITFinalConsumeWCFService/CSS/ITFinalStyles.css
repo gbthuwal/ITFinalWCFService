@@ -1,0 +1,244 @@
+﻿body {
+    font-family: Verdana;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+}
+
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 600px;
+}
+
+table.formTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    height: auto;
+    background-color: #9ad5f0;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+tr {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #9ad5f0;
+}
+
+th.top {
+    text-align: center;
+    background-color: #097a79;
+    height: 20px;
+    padding: 15px 32px;
+    font-family: Verdana;
+    color:white;
+    font-size: 25px;
+}
+
+th.bottom {
+    text-align: center;
+    background-color: #097a79;
+    height: 15px;
+    padding: 10px 20px;
+    font-family: Verdana;
+    color: navajowhite;
+    font-size: 14px;
+}
+
+
+td {
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+td.tdleft {
+    width: 40%;
+    text-align: right;
+    font-family: Verdana;
+    font-size: 16px;
+    height: 25px;
+}
+
+.tdright {
+    width: 60%;
+    text-align: left;
+    font-family: Verdana;
+    font-size: 16px;
+    height: 25px;
+}
+
+.tdcenter {
+    text-align: center;
+}
+
+#canvasMap {
+    height: 70%;
+    margin: 0px;
+    padding: 0px
+} 
+
+.validator {
+    background-color: none;
+    font-size: 14px;
+    text-align: left;
+    color: #fe2a07;
+}
+
+.button {
+    background-color: #296d98;
+    border: none;
+    color: white;
+    padding: 10px 21px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.radioButton {
+    position: center;
+    height: 18px;
+    width: 18px;
+    background-color: black;
+    border-radius: 25%;
+}
+
+
+.label {
+    background-color: none;
+    color: #fe2a07;
+    font-size: medium;
+}
+
+label {
+    background-color: none;
+    color: black;
+    font-size: medium;
+    position: center;
+    margin-top: auto;
+}
+
+.textbox {
+    height: 30px;
+    padding: 0 10px;
+    border:none;
+    background: #fcfcf0;
+    color: blue;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    width: 70%;
+}
+
+.dropdown {
+    background: #fcfcf0;
+    width: 80%;
+    height: 100%;
+    color: blue;
+    font-size: 15px;
+}
+
+.textbox:focus {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(255, 255, 255, 0.15);
+    outline: none;
+    background: #F5F5DC;
+    outline: solid 1px yellow;
+}
+
+.myGridClass {
+    width: 90%;
+    /*this will be the color of the odd row*/
+    background-color: #fff;
+    margin: 5px 0 10px 0;
+    border: solid 1px #a11246;
+    border-collapse: collapse;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.myGridClass td {
+    padding: 2px;
+    font-size: 11px;
+    text-align: center;
+    line-height: 22px;
+    border: solid 1px #a11246;
+    color: #000;
+}
+
+.myGridClass th {
+    padding: 4px 2px;
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    font-weight: 600;
+    font-size: 10px;
+    background: #b31f55;
+    border-left: solid 1px #a11246;
+}
+
+.myGridClass .myAltRowClass {
+    background: #fcfcfc repeat-x top;
+}
+
+.myGridClass .myPagerClass {
+    background: #ca2f48;
+}
+
+.myGridClass .myPagerClass table {
+    margin: 5px 0;
+}
+
+.myGridClass .myPagerClass td {
+    border-width: 0;
+    padding: 0 6px;
+    border-left: solid 1px #666;
+    font-weight: bold;
+    color: #fff;
+    line-height: 12px;
+}
+
+.myGridClass .myPagerClass a {
+    color: #666;
+    text-decoration: none;
+}
+
+.myGridClass .myPagerClass a:hover {
+    color: #000;
+    text-decoration: none;
+} 
+  

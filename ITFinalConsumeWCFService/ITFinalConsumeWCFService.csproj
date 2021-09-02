@@ -1,0 +1,282 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9866BF5C-ED20-4266-8A6C-A45561D8064E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITFinalConsumeWCFService</RootNamespace>
+    <AssemblyName>ITFinalConsumeWCFService</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44395</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DBService\DBService.disco" />
+    <None Include="Connected Services\DBService\configuration91.svcinfo" />
+    <None Include="Connected Services\DBService\configuration.svcinfo" />
+    <Content Include="Connected Services\DBService\ITFinalConsumeWCFService.DBService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\DBService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ITFinalAjaxDBService\ITFinalAjaxDBService.disco" />
+    <None Include="Connected Services\ITFinalAjaxDBService\configuration91.svcinfo" />
+    <None Include="Connected Services\ITFinalAjaxDBService\configuration.svcinfo" />
+    <Content Include="Connected Services\ITFinalAjaxDBService\ITFinalConsumeWCFService.ITFinalAjaxDBService.ItemDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\ITFinalAjaxDBService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="html\htmlJQueryAjaxWebPageClient.html" />
+    <Content Include="html\htmlJQueryAjaxWebPageGetPostClient.html" />
+    <Content Include="html\htmlJQueryAjaxWebServiceClient.html" />
+    <Content Include="html\JavaScriptObjects.html" />
+    <Content Include="html\pageJQueryManipulateDOM.html" />
+    <Content Include="ITFinalWebService.asmx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Connected Services\DBService\DBService.wsdl" />
+    <None Include="Connected Services\DBService\DBService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DBService\DBService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DBService\DBService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DBService\DBService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DBService\DBService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ITFinalAjaxDBService\ITFinalAjaxDBService.wsdl" />
+    <None Include="Connected Services\ITFinalAjaxDBService\ITFinalAjaxDBService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ITFinalAjaxDBService\ITFinalAjaxDBService1.wsdl" />
+    <None Include="Connected Services\ITFinalAjaxDBService\ITFinalAjaxDBService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ITFinalAjaxDBService\ITFinalAjaxDBService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web Pages\frmAccessControlsJQuery.aspx" />
+    <Content Include="Web Pages\frmCallWCFServiceJQueryAjax.aspx" />
+    <Content Include="Web Pages\frmConsumeDBService.aspx" />
+    <Content Include="CSS\ITFinalStyles.css" />
+    <Content Include="Web Pages\frmJQueryAjaxServicePage.aspx" />
+    <Content Include="Web Pages\frmJQueryVisualEffects.aspx" />
+    <Content Include="Web Pages\frmJQueryClient.aspx" />
+    <Content Include="Web Pages\frmJQuerySelectors.aspx" />
+    <Content Include="Web Pages\frmJQueryStudentRegistration.aspx" />
+    <Content Include="Web Pages\frmJQueryTableSelectors.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Employee.cs" />
+    <Compile Include="Connected Services\DBService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ITFinalAjaxDBService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ITFinalWebService.asmx.cs">
+      <DependentUpon>ITFinalWebService.asmx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmAccessControlsJQuery.aspx.cs">
+      <DependentUpon>frmAccessControlsJQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmAccessControlsJQuery.aspx.designer.cs">
+      <DependentUpon>frmAccessControlsJQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmCallWCFServiceJQueryAjax.aspx.cs">
+      <DependentUpon>frmCallWCFServiceJQueryAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmCallWCFServiceJQueryAjax.aspx.designer.cs">
+      <DependentUpon>frmCallWCFServiceJQueryAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmConsumeDBService.aspx.cs">
+      <DependentUpon>frmConsumeDBService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmConsumeDBService.aspx.designer.cs">
+      <DependentUpon>frmConsumeDBService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web Pages\frmJQueryAjaxServicePage.aspx.cs">
+      <DependentUpon>frmJQueryAjaxServicePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryAjaxServicePage.aspx.designer.cs">
+      <DependentUpon>frmJQueryAjaxServicePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryVisualEffects.aspx.cs">
+      <DependentUpon>frmJQueryVisualEffects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryVisualEffects.aspx.designer.cs">
+      <DependentUpon>frmJQueryVisualEffects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryClient.aspx.cs">
+      <DependentUpon>frmJQueryClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryClient.aspx.designer.cs">
+      <DependentUpon>frmJQueryClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmJQuerySelectors.aspx.cs">
+      <DependentUpon>frmJQuerySelectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmJQuerySelectors.aspx.designer.cs">
+      <DependentUpon>frmJQuerySelectors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryStudentRegistration.aspx.cs">
+      <DependentUpon>frmJQueryStudentRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryStudentRegistration.aspx.designer.cs">
+      <DependentUpon>frmJQueryStudentRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryTableSelectors.aspx.cs">
+      <DependentUpon>frmJQueryTableSelectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web Pages\frmJQueryTableSelectors.aspx.designer.cs">
+      <DependentUpon>frmJQueryTableSelectors.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DBService\" />
+    <WCFMetadataStorage Include="Connected Services\ITFinalAjaxDBService\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59285</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44395/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <link href="../CSS/ITFinalStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tblDetails').hide();
+            $('#btnGetAll').click(function () {
+                $.ajax({
+                    url: '../ITFinalWebService.asmx/GetItemDetailAll',
+                    method: "post",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    processData: false,
+                    success: function (data) {
+                        $('#tblDetails tbody').empty();
+                        $($.parseJSON(data.d)).each(function (index, value) {
+                            $("#tblDetails tbody").append("<tr><td>" + value.ItemId + "</td><td>" + value.ItemName + "</td><td>" + value.ItemMake + "</td><td>" + value.ItemSpecification + "</td></tr>");
+                        });
+                        $('#tblDetails').show();
+                    },
+                    error: function (result) {
+                        alert(result.status + ' - ' + result.statusText);
+                    }
+                });
+            });
+
+            $('#btnGetById').click(function () {
+                $.ajax({
+                    url: '../ITFinalWebService.asmx/GetItemDetailById',
+                    method: "post",
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({ itemID: $("#txtItemID").val() }),
+                    dataType: "json",
+                    success: function (data) {
+                        $('#tblDetails tbody').empty();
+                        $(data.d).each(function (index, value) {
+                            $("#tblDetails").append("<tr><td>" + value.ItemId + "</td><td>" + value.ItemName + "</td><td>" + value.ItemMake + "</td><td>" + value.ItemSpecification + "</td></tr>");
+                        });
+                        $('#tblDetails').show();
+                    },
+                    error: function (result) {
+                        alert(result.status + ' - ' + result.statusText);
+                    }
+                });
+            });
+        });
+    </script>
+    <form id="frmItems">
+        <div>
+            <table id="tblForm" class="formTable">
+                <tr>
+                    <th class="top" colspan="2">Item Detail</th>
+                </tr>
+                <tr>
+                    <td class="tdleft">Enter ItemID:</td>
+                    <td><input type="text" id="txtItemID" /></td>
+                </tr>
+                <tr>
+                    <td class="tdleft"></td>
+                    <td>
+                        <input type="button" id="btnGetAll" value="Get All Items" class="button" />
+                        <input type="button" id="btnGetById" value="Get Item By Id" class="button" />
+                    </td>
+                </tr>
+            </table>
+
+            <table id="tblDetails" class="myGridClass myAltRowClass">
+                <thead>
+                    <tr>
+                        <th>Item ID</th>
+                        <th>Item Name</th>
+                        <th>Item Make</th>
+                        <th>Item Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

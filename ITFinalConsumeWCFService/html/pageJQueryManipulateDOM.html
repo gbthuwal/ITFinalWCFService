@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .table {
+            border-collapse: collapse;
+        }
+    </style>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div').attr(
+                {
+                    'title': 'HTML Div',
+                    'style': 'border:2px solid red; font-weight:bold; width : 50%',
+                    'class': 'divDetails'
+                });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+           $('div').click(function () {
+                $('table, td').attr('title', 'Html Table')
+                    .attr('style', 'border:2px solid blue; border-collapse : collapse; width : 50%')
+                    .attr('class', 'divDetails');
+
+                $('div').each(function (index, item) {
+                    $(item).attr('id', 'divAttr' + (index + 1));
+                });
+
+                var result = '';
+                $('div').each(function (index, item) {
+                    result += '<tr><td>id=' + $(this).attr('id') + '<br/>';
+                    result += 'style=' + $(this).attr('style') + '<br />';
+                    result += 'class=' + $(item).attr('class') + '<br />';
+                    result += 'title=' + $(item).attr('title') + '</tr></td > ';
+                });
+                $('#tblSpan').html(result);
+                $('#tblSpan, #tblSpan td').attr('style', 'border:2px solid green; border-collapse: collapse; width : 50%');
+
+
+            });
+
+            $('table').click(function () { $('#tblSpan').html('') });
+
+        });
+    </script>
+
+    <div>Government Polytechnic Lohaghat</div>
+    <br />
+    <div>Government Polytechnic Dehradun</div>
+    <br />
+
+    <table id="tblSpan">
+        <tr>
+            <td><span id="resultSpan"></span></td>
+        </tr>
+    </table>
+
+    <br />
+    <table>
+        <tr>
+            <td>Govind Ballabh</td>
+            <td>HoD Information Technology</td>
+        </tr>
+    </table>
+</body>
+</html>

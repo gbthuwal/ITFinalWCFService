@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.4.1.min.js"></script>
+    <link href="../CSS/ITFinalStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var jsonObject =
+            {
+                "fName": "Ram",
+                "lName": "Dutt",
+                "age": 27,
+                "address": {
+                    "street": "6 Ram Nagar",
+                    "city": "Nainital", "state": "UK",
+                    "pinCode": "201007"
+                },
+                fullAddress: function () {
+                    return jsonObject.address.street + " " +
+                        jsonObject.address.city + " " +
+                        jsonObject.address.pinCode + " ";
+                }
+            }
+            $("div").append("<br/> Full Address : " + jsonObject.fullAddress());
+        });
+    </script>
+
+    <div>
+
+    </div>
+</body>
+</html>
